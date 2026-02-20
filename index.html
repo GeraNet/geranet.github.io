@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GeraNet – Webdesign</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GeraNet – Webdesign</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
   <div class="logo">GeraNet</div>
-  <div class="menu">
+
+  <div class="nav-right">
     <a href="#about" class="lang-text" data-key="about">Über uns</a>
     <a href="#price" class="lang-text" data-key="price">Preise</a>
-    <button onclick="toggleTheme()">🌙</button>
-    <div class="lang-switch">
-      <span onclick="setLang('de')">🇩🇪</span>
-      <span onclick="setLang('ua')">🇺🇦</span>
-      <span onclick="setLang('ru')">🇷🇺</span>
-      <span onclick="setLang('en')">🇺🇸</span>
-    </div>
+
+    <select id="language-select">
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="ua">🇺🇦 Українська</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="en">🇺🇸 English</option>
+    </select>
+
+    <button onclick="toggleTheme()" class="theme-btn">🌙</button>
   </div>
 </nav>
 
+<!-- HERO -->
 <section id="hero" class="fade">
+  <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1 class="lang-text" data-key="hero_title">
-      GeraNet – Webseiten für dein Business
+      Webseiten für dein Business
     </h1>
     <p class="lang-text" data-key="hero_text">
-      Moderne Webseiten für kleine Unternehmen.
+      Moderne & professionelle Websites für kleine Unternehmen.
     </p>
-    <a class="btn" href="#">Start</a>
+    <a href="#price" class="btn lang-text" data-key="hero_btn">
+      Jetzt starten
+    </a>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="fade">
   <h1 class="lang-text" data-key="about_title">
     Professionelle Webseiten
   </h1>
   <p class="lang-text" data-key="about_text">
-    Wir erstellen moderne Websites für lokale Unternehmen.
+    Wir erstellen moderne, mobil-optimierte Webseiten für lokale Unternehmen.
   </p>
 </section>
 
+<!-- PRICES -->
 <section id="price" class="fade">
   <h1 class="lang-text" data-key="price_title">Unsere Preise</h1>
+
   <div class="cards">
     <div class="card fade">
       <h2 class="lang-text" data-key="card1_title">Website</h2>
       <div class="price">80€</div>
-      <p class="lang-text" data-key="card1_text">1 Seite, modern</p>
-      <a class="btn" href="#">Bestellen</a>
+      <p class="lang-text" data-key="card1_text">1 Seite</p>
+      <a href="#" class="btn lang-text" data-key="order_btn">Bestellen</a>
     </div>
 
     <div class="card fade">
       <h2 class="lang-text" data-key="card2_title">Business</h2>
       <div class="price">120€</div>
       <p class="lang-text" data-key="card2_text">Mehrere Seiten</p>
-      <a class="btn" href="#">Bestellen</a>
+      <a href="#" class="btn lang-text" data-key="order_btn">Bestellen</a>
+    </div>
+
+    <div class="card fade">
+      <h2 class="lang-text" data-key="card3_title">Premium</h2>
+      <div class="price">150€</div>
+      <p class="lang-text" data-key="card3_text">Premium Design</p>
+      <a href="#" class="btn lang-text" data-key="order_btn">Bestellen</a>
     </div>
   </div>
 </section>
