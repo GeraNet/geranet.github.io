@@ -3,99 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GeraNet – Jugendprojekt Web Studio</title>
+<title>GeraNet – Webdesign</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
-    <img src="https://i.ibb.co/3Y8S0Vs6/5-ED54-DFF-A075-434-C-8175-3-D1138495782.jpg" class="hero-bg">
-
-    <div class="hero-content">
-        <h1>GeraNet</h1>
-        <p>Webseiten & Logos aus Gera – modernes Jugendprojekt</p>
-        <a href="#preise" class="main-btn">Preise ansehen</a>
+<nav>
+  <div class="logo">GeraNet</div>
+  <div class="menu">
+    <a href="#about" class="lang-text" data-key="about">Über uns</a>
+    <a href="#price" class="lang-text" data-key="price">Preise</a>
+    <a href="#" onclick="toggleTheme()">🌙</a>
+    <div class="lang-switch">
+      <span onclick="setLang('de')">🇩🇪</span>
+      <span onclick="setLang('ua')">🇺🇦</span>
+      <span onclick="setLang('ru')">🇷🇺</span>
+      <span onclick="setLang('en')">🇺🇸</span>
     </div>
-</header>
+  </div>
+</nav>
 
-<section class="about">
-    <h2>Über uns</h2>
-    <p>
-        GeraNet ist ein privates Jugendprojekt aus Gera.
-        Wir helfen kleinen Unternehmen beim Einstieg ins Internet –
-        mit modernen Webseiten und professionellen Logos.
-    </p>
-    <p>
-        Wir arbeiten als Schülerprojekt ohne Gewerbe.
-        Fokus: klares Design, Performance und faire Preise.
-    </p>
+<section id="about" class="fade">
+  <h1 class="lang-text" data-key="about_title">Professionelle Webseiten für kleine Unternehmen</h1>
+  <p class="lang-text" data-key="about_text">
+    GeraNet ist ein junges Webprojekt aus Gera. Wir erstellen moderne, mobil-optimierte Webseiten für lokale Unternehmen, Selbstständige und kreative Projekte.
+  </p>
+  <p class="lang-text" data-key="about_text2">
+    Wir arbeiten entweder mit individuellem Code (HTML, CSS, JavaScript) oder erstellen professionelle Seiten mit Google Sites – je nach Wunsch des Kunden.
+  </p>
 </section>
 
-<section class="work">
-    <h2>Wie wir arbeiten</h2>
-    <div class="work-box">
-        <div class="glass">
-            <h3>💻 Eigener Code</h3>
-            <p>
-                Wir entwickeln Webseiten selbst mit HTML & CSS.
-                Individuelles Design und maximale Flexibilität.
-            </p>
-        </div>
-        <div class="glass">
-            <h3>🌐 Google Sites</h3>
-            <p>
-                Schnelle Lösung für kleine Projekte.
-                Ideal für einfache Business-Websites.
-            </p>
-        </div>
+<section id="price" class="fade">
+  <h1 class="lang-text" data-key="price_title">Unsere Preise</h1>
+  <div class="cards">
+    <div class="card fade">
+      <h2 class="lang-text" data-key="card1_title">Website Visitenkarte</h2>
+      <div class="price">80€</div>
+      <p class="lang-text" data-key="card1_text">1 Seite, modern, mobil optimiert</p>
+      <a class="btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeqxzFEtn-K9rTCzY1oSNt_gHl39aS_TNcHPCN1W2BY8U0_Bg/viewform">
+        <span class="lang-text" data-key="order_btn">Jetzt bestellen</span>
+      </a>
     </div>
-</section>
-
-<section class="preise" id="preise">
-    <h2>Preise</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Website Basic</h3>
-            <p>1 Seite – Online-Visitenkarte</p>
-            <div class="price">80€</div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxzFEtn-K9rTCzY1oSNt_gHl39aS_TNcHPCN1W2BY8U0_Bg/viewform?usp=publish-editor" class="card-btn">Jetzt anfragen</a>
-        </div>
-
-        <div class="card">
-            <h3>Website Business</h3>
-            <p>Mehrere Seiten für Ihr Unternehmen</p>
-            <div class="price">100€</div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxzFEtn-K9rTCzY1oSNt_gHl39aS_TNcHPCN1W2BY8U0_Bg/viewform?usp=publish-editor" class="card-btn">Jetzt anfragen</a>
-        </div>
-
-        <div class="card highlight">
-            <h3>Premium Website</h3>
-            <p>Individuelles Design + Funktionen</p>
-            <div class="price">140€</div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxzFEtn-K9rTCzY1oSNt_gHl39aS_TNcHPCN1W2BY8U0_Bg/viewform?usp=publish-editor" class="card-btn">Jetzt anfragen</a>
-        </div>
-
-        <div class="card">
-            <h3>Logo Design</h3>
-            <p>Professionelles Logo</p>
-            <div class="price">30€</div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxzFEtn-K9rTCzY1oSNt_gHl39aS_TNcHPCN1W2BY8U0_Bg/viewform?usp=publish-editor" class="card-btn">Jetzt anfragen</a>
-        </div>
-
+    <div class="card fade">
+      <h2 class="lang-text" data-key="card2_title">Business Website</h2>
+      <div class="price">100€</div>
+      <p class="lang-text" data-key="card2_text">Mehr als 3 Seiten, individuelles Layout, Kontaktformular</p>
+      <a class="btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeqxzFEtn-K9rTCzY1oSNt_gHl39aS_TNcHPCN1W2BY8U0_Bg/viewform">
+        <span class="lang-text" data-key="order_btn">Jetzt bestellen</span>
+      </a>
     </div>
+    <div class="card fade">
+      <h2 class="lang-text" data-key="card3_title">Große Website</h2>
+      <div class="price">140€</div>
+      <p class="lang-text" data-key="card3_text">Viele Unterseiten, Premium Design, erweiterte Funktionen</p>
+      <a class="btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeqxzFEtn-K9rTCzY1oSNt_gHl39aS_TNcHPCN1W2BY8U0_Bg/viewform">
+        <span class="lang-text" data-key="order_btn">Jetzt bestellen</span>
+      </a>
+    </div>
+    <div class="card fade">
+      <h2 class="lang-text" data-key="card4_title">Logo Design</h2>
+      <div class="price">30€</div>
+      <p class="lang-text" data-key="card4_text">Individuelles Logo, modern & minimalistisch</p>
+      <a class="btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeqxzFEtn-K9rTCzY1oSNt_gHl39aS_TNcHPCN1W2BY8U0_Bg/viewform">
+        <span class="lang-text" data-key="order_btn">Logo bestellen</span>
+      </a>
+    </div>
+  </div>
 </section>
 
-<section class="contact">
-    <h2>Kontakt</h2>
-    <p>Direkt schreiben auf Telegram:</p>
-    <a href="https://t.me/Duf7484" class="main-btn">@Duf7484</a>
-</section>
-
-<footer>
-    Jugendprojekt – kein Gewerbe. Zahlung in bar.
-</footer>
-
+<script src="script.js"></script>
 </body>
 </html>
