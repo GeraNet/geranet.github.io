@@ -1,74 +1,89 @@
-/* ================= RESET ================= */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  scroll-behavior:smooth;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 }
 
-/* ================= BODY ================= */
 body{
-  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color:white;
-  transition:0.4s ease;
-  overflow-x:hidden;
+  transition:0.4s;
 }
 
-/* ================= NAVIGATION ================= */
 nav{
   position:fixed;
-  top:0;
   width:100%;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(255,255,255,0.08);
-  border-bottom:1px solid rgba(255,255,255,0.2);
+  top:0;
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  padding:18px 10%;
-  z-index:1000;
+  padding:20px 10%;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
 }
 
-.logo{
-  font-size:22px;
-  font-weight:bold;
-}
-
-nav a{
+nav a, nav button{
+  margin-left:15px;
+  background:none;
+  border:none;
   color:white;
-  text-decoration:none;
-  margin-left:25px;
-  transition:0.3s;
-  font-weight:500;
+  cursor:pointer;
+  font-size:16px;
 }
 
-nav a:hover{
+section{
+  padding:120px 10%;
+}
+
+.hero-content{
+  text-align:center;
+  padding-top:60px;
+}
+
+h1{
+  margin-bottom:20px;
+}
+
+.cards{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  flex:1 1 250px;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(20px);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px #00e0ff;
+}
+
+.price{
+  font-size:24px;
+  margin:15px 0;
   color:#00e0ff;
 }
 
-/* ================= LANGUAGE SWITCH ================= */
-.lang-switch span{
-  cursor:pointer;
-  font-size:20px;
-  margin-left:8px;
-  transition:0.3s;
-}
-.lang-switch span:hover{
-  transform:scale(1.2);
-}
-
-/* ================= SECTIONS ================= */
-section{
-  padding:140px 10% 100px;
+.btn{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:10px;
+  background:#00e0ff;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-/* ================= ANIMATION ================= */
 .fade{
   opacity:0;
   transform:translateY(40px);
-  transition:all 0.8s ease;
+  transition:0.8s;
 }
 
 .fade.show{
@@ -76,104 +91,7 @@ section{
   transform:translateY(0);
 }
 
-/* ================= TEXT ================= */
-h1{
-  font-size:42px;
-  margin-bottom:20px;
-}
-
-p{
-  font-size:18px;
-  line-height:1.7;
-  margin-bottom:15px;
-}
-
-/* ================= CARDS ================= */
-.cards{
-  display:flex;
-  flex-wrap:wrap;
-  gap:30px;
-  margin-top:40px;
-}
-
-.card{
-  flex:1 1 280px;
-  padding:35px;
-  border-radius:22px;
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  background: rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.25);
-  transition:0.4s ease;
-}
-
-.card:hover{
-  transform:translateY(-12px) scale(1.02);
-  box-shadow:0 0 40px rgba(0,224,255,0.6);
-}
-
-.price{
-  font-size:30px;
-  margin:15px 0;
-  font-weight:bold;
-  color:#00e0ff;
-}
-
-/* ================= BUTTON ================= */
-.btn{
-  display:inline-block;
-  padding:12px 22px;
-  border-radius:12px;
-  background:linear-gradient(45deg,#00e0ff,#00ffcc);
-  color:black;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.07);
-}
-
-/* ================= DARK MODE ================= */
 .dark{
-  background:#f3f3f3;
+  background:#f4f4f4;
   color:black;
-}
-
-.dark nav{
-  background:rgba(255,255,255,0.7);
-}
-
-.dark .card{
-  background:rgba(255,255,255,0.9);
-}
-
-/* ================= RESPONSIVE ================= */
-@media(max-width:768px){
-
-  nav{
-    flex-direction:column;
-    padding:15px 5%;
-  }
-
-  nav div{
-    margin-top:10px;
-  }
-
-  section{
-    padding:120px 5% 80px;
-  }
-
-  h1{
-    font-size:28px;
-  }
-
-  p{
-    font-size:16px;
-  }
-
-  .cards{
-    flex-direction:column;
-  }
 }
