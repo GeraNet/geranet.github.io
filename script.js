@@ -20,5 +20,5 @@ window.onload = function(){
 };
 
 function toggleTheme(){
-  // Тёмная тема по умолчанию
+  // Только тёмная тема
 }
