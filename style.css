@@ -6,7 +6,7 @@
 }
 
 body{
-  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364); /* тёмный фон */
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color:white;
   overflow-x:hidden;
 }
@@ -43,25 +43,19 @@ nav a:hover{
   justify-content:center;
   text-align:center;
   padding:0 10%;
-  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364); /* чистый фон */
-}
-
-.hero-overlay{
-  display: none; /* отключаем overlay */
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 }
 
 .hero-content h1{
   font-size:48px;
   margin-bottom:20px;
   color:white;
-  opacity:0;
 }
 .hero-content p{
   font-size:18px;
   margin-bottom:15px;
   line-height:1.6;
   color:white;
-  opacity:0;
 }
 
 /* BUTTONS */
@@ -95,7 +89,7 @@ section{
   flex:1 1 260px;
   padding:30px;
   border-radius:20px;
-  background: rgba(0,0,0,0.4); /* прозрачный фон для текста */
+  background: rgba(0,0,0,0.4);
   border:1px solid rgba(255,255,255,0.25);
   transition:0.5s;
   opacity:0;
@@ -113,7 +107,10 @@ section{
 }
 
 /* ANIMATIONS */
-.fade.show{
+.fade.show,
+.slide-up.show,
+.slide-left.show,
+.slide-right.show{
   opacity:1;
   transform:translateY(0) scale(1);
   transition: all 0.8s ease-out;
@@ -121,20 +118,14 @@ section{
 
 .slide-up.show{
   transform:translateY(0);
-  opacity:1;
-  transition: all 0.8s ease-out;
 }
 
 .slide-left.show{
   transform:translateX(0);
-  opacity:1;
-  transition: all 0.8s ease-out;
 }
 
 .slide-right.show{
   transform:translateX(0);
-  opacity:1;
-  transition: all 0.8s ease-out;
 }
 
 .scale-up{
