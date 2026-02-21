@@ -6,14 +6,14 @@
 }
 
 body{
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364); /* тёмный фон */
   color:white;
   overflow-x:hidden;
 }
 
 /* NAV */
 nav{
-  position:fixed;
+  position: fixed;
   top:0;
   width:100%;
   padding:18px 10%;
@@ -21,7 +21,7 @@ nav{
   justify-content:space-between;
   align-items:center;
   backdrop-filter:blur(20px);
-  background:rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.08);
   z-index:1000;
 }
 
@@ -37,23 +37,30 @@ nav a:hover{
 
 /* HERO */
 #hero{
-  min-height:100vh;
+  height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
   padding:0 10%;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364); /* чистый фон */
+}
+
+.hero-overlay{
+  display: none; /* отключаем overlay */
 }
 
 .hero-content h1{
   font-size:48px;
   margin-bottom:20px;
+  color:white;
   opacity:0;
 }
 .hero-content p{
   font-size:18px;
   margin-bottom:15px;
   line-height:1.6;
+  color:white;
   opacity:0;
 }
 
@@ -62,7 +69,7 @@ nav a:hover{
   display:inline-block;
   padding:12px 22px;
   border-radius:12px;
-  background:linear-gradient(45deg,#00e0ff,#00ffcc);
+  background: linear-gradient(45deg,#00e0ff,#00ffcc);
   color:black;
   text-decoration:none;
   font-weight:bold;
@@ -88,7 +95,7 @@ section{
   flex:1 1 260px;
   padding:30px;
   border-radius:20px;
-  background:rgba(0,0,0,0.4); /* прозрачный, чтобы текст был виден */
+  background: rgba(0,0,0,0.4); /* прозрачный фон для текста */
   border:1px solid rgba(255,255,255,0.25);
   transition:0.5s;
   opacity:0;
