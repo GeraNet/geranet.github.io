@@ -1,131 +1,92 @@
-* {
+*{
   margin:0;
   padding:0;
   box-sizing:border-box;
   font-family:-apple-system,BlinkMacSystemFont,sans-serif;
 }
 
-body {
-  background: #0b0f1a;
+body{
+  background: radial-gradient(circle at top,#0f2027,#0b0f1a);
   color:white;
-  overflow-x:hidden;
 }
 
-/* ===== NAV GLASS ===== */
-nav {
+nav{
   position:fixed;
-  top:0;
   width:100%;
+  top:0;
   display:flex;
   justify-content:space-between;
-  padding:15px 6%;
-  z-index:1000;
-
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  transition:0.4s;
+  padding:15px;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(10px);
 }
 
-nav.scrolled {
-  backdrop-filter: blur(20px);
-  background: rgba(0,0,0,0.4);
+nav a{
+  color:white;
+  margin:0 8px;
+  text-decoration:none;
 }
 
-/* ===== HERO ===== */
-#hero {
+#hero{
   height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  position:relative;
-  overflow:hidden;
 }
 
-.parallax {
-  position:absolute;
-  width:120%;
-  height:120%;
-  background: radial-gradient(circle,#00e0ff33,transparent);
-  transform:translateY(0px);
-}
-
-/* ===== GLASS EFFECT ===== */
-.glass {
-  background: rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(15px);
-  border-radius:20px;
-  padding:20px;
-}
-
-/* ===== BUTTON ===== */
-.btn {
-  padding:12px 18px;
-  border-radius:12px;
-  background:linear-gradient(45deg,#00e0ff,#00ffcc);
-  border:none;
-  color:black;
-  font-weight:bold;
-  cursor:pointer;
-  position:relative;
-  overflow:hidden;
-  transition:0.3s;
-}
-
-/* Glow */
-.btn:hover {
-  box-shadow:0 0 20px #00e0ff;
-  transform:scale(1.05);
-}
-
-/* Ripple */
-.ripple::after {
-  content:"";
-  position:absolute;
-  width:0;
-  height:0;
-  background:rgba(255,255,255,0.5);
-  border-radius:50%;
-  transform:translate(-50%,-50%);
-  top:50%;
-  left:50%;
-  transition:width 0.5s,height 0.5s;
-}
-
-.ripple:active::after {
-  width:200px;
-  height:200px;
-}
-
-/* ===== CARDS ===== */
-.cards {
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-
-.card {
-  width:250px;
+.fade{
   opacity:0;
-  transform:translateY(40px);
-  transition:0.6s;
-}
-
-.card.show {
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* ===== REVEAL ===== */
-.reveal {
-  opacity:0;
-  transform:translateY(50px);
+  transform:translateY(20px);
   transition:0.8s;
 }
 
-.reveal.show {
+.fade.show{
   opacity:1;
   transform:translateY(0);
+}
+
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  margin-top:10px;
+  background:linear-gradient(45deg,#00e0ff,#00ffcc);
+  color:black;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.cards{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:30px;
+}
+
+.card{
+  width:250px;
+  padding:20px;
+  background:rgba(255,255,255,0.05);
+  border-radius:15px;
+}
+
+.docs{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  margin-top:20px;
+}
+
+.docs a{
+  color:#00e0ff;
+  text-decoration:none;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:0.6;
 }
