@@ -3,87 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GeraNet – Webdesign</title>
-
+<title>GeraNet</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
 <nav>
   <div class="logo">GeraNet</div>
+
   <div class="nav-right">
-    <a href="#about">Über uns</a>
-    <a href="#price">Preise</a>
-    <a href="#contact">Kontakt</a>
+    <a href="#hero" data-lang="nav_home">Start</a>
+    <a href="#about" data-lang="nav_about">Über uns</a>
+    <a href="#price" data-lang="nav_price">Preise</a>
+    <a href="#docs" data-lang="nav_docs">Dokumente</a>
+    <a href="#contact" data-lang="nav_contact">Kontakt</a>
+
+    <select id="lang">
+      <option value="de">DE</option>
+      <option value="ru">RU</option>
+      <option value="ua">UA</option>
+    </select>
   </div>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-content">
-    <h1>Moderne Webseiten für dein Business</h1>
-    <p>Wir entwickeln schnelle und mobile-optimierte Webseiten für Unternehmen und Projekte.</p>
-    <p>Klar, modern und individuell gestaltet.</p>
-    <a href="#price" class="btn">Pakete ansehen</a>
+    <h1 class="fade" data-lang="hero_title"></h1>
+    <p class="fade" data-lang="hero_sub1"></p>
+    <p class="fade" data-lang="hero_sub2"></p>
+    <a href="#price" class="btn fade" data-lang="hero_btn"></a>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="fade slide-left">
-  <h1>Über GeraNet</h1>
-  <p>Wir sind ein kleines Webprojekt aus Deutschland, das moderne Webseiten entwickelt.</p>
-  <p>Fokus auf Design, Geschwindigkeit und mobile Optimierung.</p>
+<section id="about" class="fade">
+  <h1 data-lang="about_title"></h1>
+  <p data-lang="about_text"></p>
+  <p data-lang="about_text2"></p>
+  <p data-lang="about_text3"></p>
 </section>
 
-<!-- PRICES --> 
-<section id="price" class="fade slide-right">
-  <h1>Preise & Pakete</h1>
+<!-- PRICE -->
+<section id="price">
+  <h1 class="fade" data-lang="price_title"></h1>
 
   <div class="cards">
 
-    <div class="card fade slide-up scale-on-hover">
-      <h2>Visitenkarte</h2>
-      <div class="price">ab 80€</div>
-      <p>1 Seite, modern und mobil optimiert.</p>
-      <button class="btn order-btn">Bestellen</button>
+    <div class="card fade">
+      <h2 data-lang="p1_title"></h2>
+      <p>80€</p>
+      <p data-lang="p1_text"></p>
+      <a class="btn" href="https://t.me/Duf7484">Telegram</a>
+      <a class="btn" href="https://instagram.com">Instagram</a>
     </div>
 
-    <div class="card fade slide-up scale-on-hover">
-      <h2>Business Website</h2>
-      <div class="price">ab 100€</div>
-      <p>Mehrere Seiten mit individuellem Design.</p>
-      <button class="btn order-btn">Bestellen</button>
-    </div>
-
-    <div class="card fade slide-up scale-on-hover">
-      <h2>Premium Website</h2>
-      <div class="price">ab 140€</div>
-      <p>Große Projekte mit Animationen.</p>
-      <button class="btn order-btn">Bestellen</button>
-    </div>
-
-    <div class="card fade slide-up scale-on-hover">
-      <h2>Logo Design</h2>
-      <div class="price">ab 30€</div>
-      <p>Modernes Logo für dein Business.</p>
-      <button class="btn order-btn">Bestellen</button>
+    <div class="card fade">
+      <h2 data-lang="p2_title"></h2>
+      <p>100€</p>
+      <p data-lang="p2_text"></p>
+      <a class="btn" href="https://t.me/Duf7484">Telegram</a>
+      <a class="btn" href="https://instagram.com">Instagram</a>
     </div>
 
   </div>
+</section>
 
-  <div class="app-select hidden">
-    <a href="#"><i class="fas fa-envelope"></i> E-Mail Kontakt</a>
-    <a href="#"><i class="fas fa-globe"></i> Website Anfrage</a>
+<!-- DOCS -->
+<section id="docs" class="fade">
+  <h2 data-lang="docs_title"></h2>
+
+  <div class="docs">
+    <a href="https://docs.google.com/document/d/1-GLz_-DTqfBB4l8-cTMrRMik3scIN9OyW-dMY59wgjA/edit">Datenschutz</a>
+    <a href="https://docs.google.com/document/d/109P3rnm7qVgGXjFwghw-ktSiOEM62Xnm2VQpmZetlK0/edit">Impressum</a>
+    <a href="https://docs.google.com/document/d/1-PpB_S4wFFowxGWyDT-yMOQwoVxI8RiJ1F5qZkdVGZ8/edit">Projektregeln</a>
   </div>
-
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="fade slide-left">
-  <h1>Kontakt</h1>
-  <p>Schreibe uns über das Kontaktformular oder per Anfrage auf der Website.</p>
+<section id="contact" class="fade">
+  <h1 data-lang="contact_title"></h1>
+  <p data-lang="contact_text"></p>
+
+  <a class="btn" href="https://t.me/Duf7484">Telegram</a>
+  <a class="btn" href="https://instagram.com">Instagram</a>
 </section>
 
 <footer>
