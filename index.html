@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GeraNet</title>
+<title>GeraNet – Webdesign</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,10 +14,9 @@
   <div class="logo">GeraNet</div>
 
   <div class="nav-right">
-    <a href="#hero" data-lang="nav_home">Start</a>
     <a href="#about" data-lang="nav_about">Über uns</a>
-    <a href="#price" data-lang="nav_price">Preise</a>
-    <a href="#docs" data-lang="nav_docs">Dokumente</a>
+    <a href="#me" data-lang="nav_me">Über mich</a>
+    <a href="#price" data-lang="nav_price">Anfrage</a>
     <a href="#contact" data-lang="nav_contact">Kontakt</a>
 
     <select id="lang">
@@ -30,64 +30,67 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-content">
-    <h1 class="fade" data-lang="hero_title"></h1>
-    <p class="fade" data-lang="hero_sub1"></p>
-    <p class="fade" data-lang="hero_sub2"></p>
-    <a href="#price" class="btn fade" data-lang="hero_btn"></a>
+    <h1 data-lang="hero_title"></h1>
+    <p data-lang="hero_p1"></p>
+    <p data-lang="hero_p2"></p>
+    <a href="#price" class="btn" data-lang="hero_btn"></a>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="fade">
+<section id="about">
   <h1 data-lang="about_title"></h1>
-  <p data-lang="about_text"></p>
-  <p data-lang="about_text2"></p>
-  <p data-lang="about_text3"></p>
+
+  <p data-lang="about_p1"></p>
+  <p data-lang="about_p2"></p>
+  <p data-lang="about_p3"></p>
+  <p data-lang="about_p4"></p>
 </section>
 
-<!-- PRICE -->
+<!-- ABOUT ME -->
+<section id="me" class="me-section">
+
+  <img class="me-img" src="https://i.ibb.co/KcDnsrzs/IMG-3143.jpg" alt="GeraNet Creator">
+
+  <h1 class="typing-title" data-lang="me_title"></h1>
+
+  <p class="typing-text" data-lang="me_text"></p>
+
+</section>
+
+<!-- PRICE / ORDER -->
 <section id="price">
-  <h1 class="fade" data-lang="price_title"></h1>
 
-  <div class="cards">
+  <h1 data-lang="price_title"></h1>
 
-    <div class="card fade">
-      <h2 data-lang="p1_title"></h2>
-      <p>80€</p>
-      <p data-lang="p1_text"></p>
-      <a class="btn" href="https://t.me/Duf7484">Telegram</a>
-      <a class="btn" href="https://instagram.com">Instagram</a>
-    </div>
+  <div class="order-box">
 
-    <div class="card fade">
-      <h2 data-lang="p2_title"></h2>
-      <p>100€</p>
-      <p data-lang="p2_text"></p>
-      <a class="btn" href="https://t.me/Duf7484">Telegram</a>
-      <a class="btn" href="https://instagram.com">Instagram</a>
-    </div>
+    <h2 data-lang="order_title"></h2>
+
+    <p data-lang="order_text1"></p>
+    <p data-lang="order_text2"></p>
+    <p data-lang="order_text3"></p>
+    <p data-lang="order_text4"></p>
+
+    <a class="btn" href="https://t.me/">Telegram</a>
+    <a class="btn" href="https://instagram.com/">Instagram</a>
 
   </div>
-</section>
 
-<!-- DOCS -->
-<section id="docs" class="fade">
-  <h2 data-lang="docs_title"></h2>
-
-  <div class="docs">
-    <a href="https://docs.google.com/document/d/1-GLz_-DTqfBB4l8-cTMrRMik3scIN9OyW-dMY59wgjA/edit">Datenschutz</a>
-    <a href="https://docs.google.com/document/d/109P3rnm7qVgGXjFwghw-ktSiOEM62Xnm2VQpmZetlK0/edit">Impressum</a>
-    <a href="https://docs.google.com/document/d/1-PpB_S4wFFowxGWyDT-yMOQwoVxI8RiJ1F5qZkdVGZ8/edit">Projektregeln</a>
+  <div class="documents">
+    <ul>
+      <li><a href="https://docs.google.com/document/d/1-GLz_-DTqfBB4l8-cTMrRMik3scIN9OyW-dMY59wgjA/edit">Datenschutz Erklärung</a></li>
+      <li><a href="https://docs.google.com/document/d/1-PpB_S4wFFowxGWyDT-yMOQwoVxI8RiJ1F5qZkdVGZ8/edit">Projektregeln</a></li>
+      <li><a href="https://docs.google.com/document/d/109P3rnm7qVgGXjFwghw-ktSiOEM62Xnm2VQpmZetlK0/edit">Impressum</a></li>
+    </ul>
   </div>
+
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="fade">
+<section id="contact">
   <h1 data-lang="contact_title"></h1>
   <p data-lang="contact_text"></p>
-
-  <a class="btn" href="https://t.me/Duf7484">Telegram</a>
-  <a class="btn" href="https://instagram.com">Instagram</a>
 </section>
 
 <footer>
